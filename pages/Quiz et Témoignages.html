@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz et Témoignages</title>
+    <link rel="stylesheet" href="../css/Quiz et Témoignages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="" class="LOGO">Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="../index.html" class="active">Accueil</a>
+            <a href="./propos.html">À propos</a>
+            <div class="dropdown">
+                <a href="../pages/Expériences.html" class="dropdown-toggle">
+                    Expériences
+                    <i class='bx bx-chevron-down'></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Expériences.html#Parcours-académique">Parcours académique</a></li>
+                    <li><a href="./Expériences.html#skills">Compétences</a></li>
+                    <li><a href="./Expériences.html#stage">Stages et Expériences professionnelles</a></li>
+                    <li><a href="./Expériences.html#manifestations">Manifestations et Événements</a></li>
+                </ul>
+            </div>
+            <a href="./Projets-et-Etudes.html">Projets</a>
+            <a href="./Passions-et-Qualites.html">Passions</a>
+            <a href="#Quiz-et-Temoignages">Quiz</a>
+            <a href="./Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Quiz Section -->
+    <div class="content">
+        <h1 class="title">
+            <span class="aurora-text">Quiz</span>
+            <div class="aurora">
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+            </div>
+        </h1>
+    </div>
+    
+    <div id="quiz"></div> <!-- Where the quiz questions will appear -->
+    
+    <!-- Score Display -->
+    <div id="score" style="visibility: hidden;"></div> <!-- Hidden initially, will show after quiz completion -->
+
+    <script src="../js/Quiz.js"></script>
+</body>
+</html>

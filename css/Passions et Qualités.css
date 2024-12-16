@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-y: auto; /* Activer le scroll */
+    scrollbar-width: thin; /* Barre fine pour Firefox */
+    scrollbar-color: var(--main-color) var(--second-bg-color); /* Couleurs pour Firefox */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Custom scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--second-bg-color);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #00c9ff;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.LOGO {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--second-bg-color);
+        z-index: 1000;
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+/* Menu icon */
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/* Animation for dropdown menu */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar.active {
+    animation: slideDown 0.3s ease-in-out;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--second-bg-color);
+    min-width: 30rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 1rem 0.2rem;
+}
+
+.dropdown-menu li a {
+    display: block;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover > a {
+    color: var(--main-color);
+}
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.projects {
+    padding: 100px 15px;
+    /* background: #2cc5ab; / / Si tu souhaites ajouter un fond, décommente cette ligne */
+}
+
+.projects h2 {
+    margin-bottom: 2rem;
+}
+
+.project-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+    gap: 2rem;
+    row-gap: 4rem;
+    place-items: center;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(135, 132, 132, 0.2);
+    border: 3px solid #157d9f;
+    border-radius: 3rem;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 350px;
+    height: 500px; /* Fixed height */
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(21, 159, 136, 0.8);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lighter animation on hover */
+    box-shadow: 0 0 250px rgba(21, 125, 159, 0.8), 0 0 150px rgba(122, 21, 159, 0.8); /* Fixed box-shadow */
+    transform: scale(1.02);
+}
+
+.project-card img {
+    max-width: 300px;
+    height: 200px;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    font-size: 1.2rem;
+}
+
+
+/* Styling for video container */
+/* General Styles */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Project Card Video Preview */
+.project-video-preview {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(21, 159, 136, 0.8);
+    transition: 0.3s ease;
+}
+
+.project-video-preview:hover {
+    transform: scale(1.02);
+}
+
+/* Modal Styles */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-modal-content {
+    position: relative;
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    max-width: 80%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-modal-content video {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.video-modal-content p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Close Icon */
+.close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close-icon:hover {
+    color: #f00;
+}

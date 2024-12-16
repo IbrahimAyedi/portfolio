@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passions et Qualités</title>
+    <link rel="stylesheet" href="../css/Passions et Qualités.css">
+</head>
+<body>
+     <!-- Header -->
+     <header class="header">
+        <a href="" class="LOGO">Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="../index.html" class="active">Accueil</a>
+            <a href="./propos.html">À propos</a>
+            <div class="dropdown">
+                <a href="./Expériences.html" class="dropdown-toggle">
+                    Expériences
+                    <i class='bx bx-chevron-down'></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="./Expériences.html#Parcours-académique">Parcours académique</a></li>
+                    <li><a href="./Expériences.html#skills">Compétences</a></li>
+                    <li><a href="./Expériences.html#stage">Stages et Expériences professionnelles</a></li>
+                    <li><a href="./Expériences.html#manifestations">Manifestations et Événements</a></li>
+                </ul>
+            </div>
+            <a href="./Projets et Études.html">Projets</a>
+            <a href="#Passions et Qualités.html">Passions</a>
+            <a href="./Quiz et Témoignages.html">Quiz</a>
+            <a href="./Contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="projects"  id="proj">
+        <h2 class="heading">Passions</h2>
+        <div class="project-box">
+            <!--P1-->
+            <div class="project-card">
+                <img src="../image/activie sportif.jpg" alt="">
+                <h3>Krav Maga : De l'Art de la Défense à l'Excellence en D4</h3>
+                <p>Passionné par l'autodéfense et la maîtrise de soi, je suis actuellement en grade D4 en Krav Maga,
+                    une discipline exigeante qui m'a permis de développer à la fois ma force physique et mentale. 
+                    Grâce à mes compétences en Krav Maga, je suis capable de réagir de manière rapide et efficace face
+                    à diverses situations de défense personnelle</p>
+                   
+            </div>
+            <!--P2-->
+            <!--P2-->
+            <!--P2-->
+            <!-- Project Card with Video -->
+            <div class="project-card">
+                <video class="project-video-preview" src="../image/krav maga.mp4" autoplay muted loop></video>
+                <h3>Un Parcours d'Excellence au Grade D4</h3>
+                <p>Actuellement au grade D4 en Krav Maga, je fais partie des 3 personnes
+                    sur 30 à avoir atteint ce niveau, grâce à un entraînement intensif et une détermination constante</p>
+            </div>
+
+            <!-- Modal for Video -->
+            <div class="video-modal" id="videoModal">
+                <div class="video-modal-content">
+                <button id="closeModal" class="close-icon">&times;</button>
+                <video id="modalVideo" src="../image/krav maga.mp4" controls></video>
+                <p>Actuellement au grade D4 en Krav Maga, je fais partie des 3 personnes sur 30 à avoir atteint ce niveau,
+                    grâce à un entraînement intensif et une détermination constante.</p>
+                </div>
+            </div>
+
+
+            <!--P3-->
+            <div class="project-card">
+                <img src="../image/taekwondo.jpeg" alt="">
+                <h3> Une Ceinture Demi-Noire au Cœur de l'Élite avec l'USGN</h3>
+                <p>En tant que ceinture demi-noire en Taekwondo, j'ai eu l'honneur de m'entraîner aux côtés de
+                    l'USGN (Unité Spéciale de la Garde Nationale), ce qui m'a permis de renforcer mes compétences
+                    techniques et de développer un esprit d'équipe au sein d'un environnement exigeant.</p>
+                   
+            </div>
+
+            <!--P4-->
+            <div class="project-card">
+                <img src="../image/monastir.jpg" alt="">
+                <h3>les Voyages et l’Automobile</h3>
+                <p>Avec une véritable passion pour les voyages et une fascination pour les voitures,
+                    je trouve mon inspiration dans chaque trajet. Monastir, une destination qui me tient particulièrement
+                    à cœur, incarne mon amour pour les découvertes culturelles et les escapades maritimes.
+                    Que ce soit sur les routes ou au bord de la mer...</p>  
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="../js/passions.js"></script>
+</body>
+</html>
